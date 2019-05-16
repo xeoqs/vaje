@@ -1,0 +1,39 @@
+//pogram, ki deklarira strukturo 'oseba' s komponentami ime, priimek, višina, starost, deklarira 
+//tudi spremeni spremenjivko strukture osebe 
+
+#include <iostream>
+#include <stdio.h>
+
+
+using namespace std;
+
+struct oseba
+{
+	char ime[21];
+	char priimek[31];
+	int višina;
+	int starost;
+};
+
+
+int main()
+{
+	struct oseba x;
+	cout << "ime: ";
+	gets_s(x.ime);
+	fflush(stdin);
+	cout << "\npriimek: ";
+	gets_s(x.priimek);
+	cout << "\nvišina: ";
+	cin >> x.višina;
+	cout << "\nstarost: ";
+	cin >> x.starost;
+
+	cout << "ime je ";
+	puts(x.ime);
+	cout << "\npriimek je ";
+	puts(x.priimek);
+	cout << "\nvisina je " << x.višina << " cm\n";
+	cout << "\nstarost je " << x.starost << " let\n";
+
+}
